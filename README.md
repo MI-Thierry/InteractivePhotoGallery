@@ -13,7 +13,7 @@ This website showcases animals and their global habitats in an interactive and v
 - Mozilla Firefox
 
 ### How to deploy
-- Clone this repository using `git clone https://github.com/MI-Thierry/InteractivePhotoGallery.git` command in [Git Client](https://www.git-scm.com/downloads)
+- Clone this repository using `git clone https://github.com/MI-Thierry/InteractivePhotoGallery.git` command in your [Git Client](https://www.git-scm.com/downloads)
 - Open [index.html](https://github.com/MI-Thierry/InteractivePhotoGallery/blob/main/index.html) file in your web browser.
 - The website should load and function as intended.
 
