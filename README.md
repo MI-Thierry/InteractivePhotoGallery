@@ -13,7 +13,8 @@ This website showcases animals and their global habitats in an interactive and v
 - Mozilla Firefox
 
 ### How to deploy
-- Open `index.html` file in your web browser.
+- Clone this repository using `git clone https://github.com/MI-Thierry/InteractivePhotoGallery.git` command in [Git Client](https://www.git-scm.com/downloads)
+- Open [index.html](https://github.com/MI-Thierry/InteractivePhotoGallery/blob/main/index.html) file in your web browser.
 - The website should load and function as intended.
 
 ### Technology Used
@@ -22,7 +23,7 @@ This website showcases animals and their global habitats in an interactive and v
 - **JavaScript**: Enables interactivity and dynamic behavior.
 
 ## Challenges
-The `Challenges` folder contains individual coding challenges with unit tests for the functions implemented in it.
+The [Challenges](https://github.com/MI-Thierry/InteractivePhotoGallery/tree/main/Challenges) folder contains individual coding challenges with unit tests for the functions implemented in it.
 
 ### Running Unit Tests
 - Open the corresponding HTML file (e.g. `stringTransform.html` or `arrayMap.html`).
