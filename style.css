@@ -1,17 +1,17 @@
 /* Import fonts from fonts directory */
 @font-face {
     font-family: 'DIN Condensed';
-    src: url("fonts/DIN-Condensed.otf");
+    src: url("Assets/fonts/DIN-Condensed.otf");
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url("fonts/Poppins-ExtraLight.ttf");
+    src: url("Assets/fonts/Poppins-ExtraLight.ttf");
 }
 
 @font-face {
     font-family: 'Font Awesome';
-    src: url("fonts/Font-Awesome.otf");
+    src: url("Assets/fonts/Font-Awesome.otf");
 }
 
 /* Reset values */
