@@ -26,6 +26,7 @@ function StringTransformer(inputStr) {
     return result.trim();
 }
 
+console.log("String Transformation Challenge.");
 
 // Unit Tests
 // Test words with length divisible by 3
