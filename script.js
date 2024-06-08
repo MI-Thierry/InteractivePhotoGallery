@@ -1,45 +1,53 @@
 const cards = Array.from(document.getElementsByClassName("card"));
+let isAnimationAllowed = false
+
+function HandleCardHover(event) {
+    const targetCard = event.target;
+    const knowMoreElement = targetCard.querySelector(".know-more");
+    const nameElement = targetCard.querySelector(".name");
+    const locationElement = targetCard.querySelector(".location");
+
+    if (!isAnimationAllowed) {
+        // Enable animations
+        cards.forEach(card => {
+            card.querySelector(".know-more").classList.remove("no-transition-animations");
+            card.querySelector(".name").classList.remove("no-transition-animations");
+            card.querySelector(".location").classList.remove("no-transition-animations");
+        })
+        isAnimationAllowed = true;
+    }
+
+    // Handle hovering event
+    if (event.type === "mouseenter") {
+        knowMoreElement.style.opacity = 1
+        nameElement.style.transform = "translateY(0px)";
+        locationElement.style.transform = "translateY(0px)";
+    }
+
+    else {
+        knowMoreElement.style.opacity = 0;
+        nameElement.style.transform = `translateY(${knowMoreElement.offsetHeight + 6}px)`;
+        locationElement.style.transform = `translateY(${knowMoreElement.offsetHeight + 6}px)`;
+    }
+
+}
 
 // Iterate through all elements with class name of card
 cards.forEach(card => {
-    const knowMoreClass = card.querySelector(".know-more");
-    const nameClass = card.querySelector(".name");
-    const locationClass = card.querySelector(".location");
+    const knowMoreElement = card.querySelector(".know-more");
+    const nameElement = card.querySelector(".name");
+    const locationElement = card.querySelector(".location");
 
-    // Remove transition animations while positioning descriptions
-    knowMoreClass.classList.add("no-transition-animations");
-    nameClass.classList.add("no-transition-animations");
-    locationClass.classList.add("no-transition-animations");
+    // Remove transition animations using class defined in CSS while positioning descriptions
+    knowMoreElement.classList.add("no-transition-animations");
+    nameElement.classList.add("no-transition-animations");
+    locationElement.classList.add("no-transition-animations");
 
     // Positions descriptions
-    locationClass.style.transform = `translateY(${knowMoreClass.offsetHeight + 6}px)`;
-    nameClass.style.transform = `translateY(${knowMoreClass.offsetHeight + 6}px)`;
+    locationElement.style.transform = `translateY(${knowMoreElement.offsetHeight + 6}px)`;
+    nameElement.style.transform = `translateY(${knowMoreElement.offsetHeight + 6}px)`;
 
-    // Add event listeners to every card that have className of card
-    card.addEventListener("mouseenter", function (event) {
-        const targetCard = event.target;
-        targetCard.querySelector(".know-more").style.opacity = 1
-
-        targetCard.querySelector(".name").style.transform = "translateY(0px)";
-        targetCard.querySelector(".location").style.transform = "translateY(0px)";
-    });
-
-    card.addEventListener("mouseleave", function (event) {
-        const targetCard = event.target;
-        const knowMoreClass = targetCard.querySelector(".know-more");
-
-        knowMoreClass.style.opacity = 0;
-
-        targetCard.querySelector(".name").style.transform = `translateY(${knowMoreClass.offsetHeight + 6}px)`;
-        targetCard.querySelector(".location").style.transform = `translateY(${knowMoreClass.offsetHeight + 6}px)`;
-    });
+    // Add event listeners to handle mouse hovering events
+    card.addEventListener("mouseenter", HandleCardHover);
+    card.addEventListener("mouseleave", HandleCardHover);
 });
-
-// Wait small time before enabling the transition animations in elements
-setTimeout(() => {
-    cards.forEach((card, index) => {
-        card.querySelector(".know-more").classList.remove("no-transition-animations");
-        card.querySelector(".name").classList.remove("no-transition-animations");
-        card.querySelector(".location").classList.remove("no-transition-animations");
-    });
-}, 0.5);

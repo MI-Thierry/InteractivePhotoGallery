@@ -1,6 +1,9 @@
 // String transformation
 function StringTransformer(inputStr) {
     let result = "";
+    if (inputStr.length < 1 || inputStr.length > 1000) {
+        throw "String length must be between 1 and 1000";
+    }
 
     if (inputStr.length % 15 == 0) {
         // Reverse the input string and change it into its ASCII representation
