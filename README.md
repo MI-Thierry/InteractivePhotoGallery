@@ -22,7 +22,7 @@ This website showcases animals and their global habitats in an interactive and v
 - **CSS**: Styles the website's visual elements for attractiveness and responsiveness.
 - **JavaScript**: Enables interactivity and dynamic behavior.
 
-## Challenges
+## Coding Challenges
 The [Challenges](https://github.com/MI-Thierry/InteractivePhotoGallery/tree/main/Challenges) folder contains individual coding challenges with unit tests for the functions implemented in it.
 
 ### Running Unit Tests
