@@ -1,7 +1,7 @@
 const cards = Array.from(document.getElementsByClassName("card"));
 
 // Iterate through all elements with class name of card
-cards.forEach((card, index) => {
+cards.forEach(card => {
     const knowMoreClass = card.querySelector(".know-more");
     const nameClass = card.querySelector(".name");
     const locationClass = card.querySelector(".location");
